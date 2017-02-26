@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>First Django!</title>
+	<style>
+		body {
+			background-color:#f4f7f8;
+			font-family: courier;
+		}
+		.navigation {
+			background-color: #dddddd;
+			display:flex;
+			flex-flow: row wrap;
+			align-items: center;
+			justify-content: space-between;
+			border-radius: 15px;
+		}
+		.navigation a h3 {
+			margin-left:50px;
+			color:black;
+		}
+		.navigation ul {
+			list-style-type: none;
+			margin-right: 50px;
+			padding: 0;
+		}
+		.navigation li {
+			display: inline;
+		}
+		.navigation a {
+			text-decoration: none;
+			color: grey;
+			padding-right:10px;
+		}
+		.navigation a:hover {
+			color:black;
+		}
+		.home, .contact, .about {
+			text-align: center;
+			margin-top:150px;
+		}
+	</style>
+</head>
+<body>
+	<div class="navigation">
+		<a href="/home"><h3>First Django Project</h3></a>
+		<ul>
+			<li><a href="/home">Home</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+	</div>
+
+	{% block page_content %}
+	{% endblock %}
+</body>
+</html>
